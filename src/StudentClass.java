@@ -1,7 +1,16 @@
 import java.util.Scanner;
 
 class Student {
-   
+   String name;
+   int rollNo;
+   Student(String a,int b){
+        name=a;
+        rollNo=b;
+   }
+   public void display(){
+        System.out.println("Name: "+name+" Roll: "+rollNo);
+   }
+
 
     // TODO: Create a parameterized constructor Student(String name, int rollNo)
     
@@ -9,7 +18,18 @@ class Student {
 }
 
 public class StudentClass {
-    
+    public static void main(String args[]){
+            Scanner sc = new Scanner(System.in);
+            String name1= sc.next();
+            int roll1= sc.nextInt();
+            String name2= sc.next();
+            int roll2= sc.nextInt();
+
+            Student s1= new  Student(name1,roll1);
+            Student s2= new  Student(name2,roll2);
+            s1.display();
+            s2.display();
+    }
         
         // TODO: Read name1
         // TODO: Read rollNo1
